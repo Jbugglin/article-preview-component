@@ -2,7 +2,8 @@
     --very-dark-grayish-blue: hsl(217, 19%, 35%);
     --desaturated-dark-blue: hsl(214, 17%, 51%);
     --grayish-blue: hsl(212, 23%, 69%);
-    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --mcBoxShadow: hsla(210, 18%, 87%, 0.247);
     font-size: 13px;
 }
 
@@ -23,12 +24,13 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: var(--Light-grayish-blue);
+    background-color: var(--light-grayish-blue);
 }
 
 main {
     background-color: white;
     border-radius: 0.75rem;
+    box-shadow: 0.125rem 1rem 0.75rem var(--mcBoxShadow);
 }
 
 main .hero-image {
@@ -100,19 +102,56 @@ main .hero-image {
 }
 
 /* || Desktop-viewport styling with media query */
+@media screen and (min-width: 400px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        max-width: 750px;
+        height: 300px;
+        border-radius: 0.75rem;
+    }
 
-/*
-main {}
-main .hero-image {}
-main .text-container {}
-.text-container h1 {}
-.text-container p {}
-.text-container .article-credit {}
-.article-credit #user-avatar {}
-.article-credit h2 {}
-.article-credit .date-created {}
-.article-credit .share-button {}
-.share-button button {}
-.share-button button img {}
-footer {}
-*/
+    main .hero-image {
+        border-radius: 0.75rem 0rem 0rem 0.75rem;
+        width: 40%;
+    }
+
+    main .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 4rem;
+    }
+
+    .text-container h1 {
+        width: 100%;
+        font-size: 1.625rem;
+    }
+
+    .text-container p {
+        width: 100%;
+    }
+
+    .text-container .article-credit {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .article-credit .author-pubDate{
+        margin: 0rem 0rem 0rem 2rem;
+    }
+
+    .article-credit #user-avatar {}
+
+    .article-credit h2 {
+        font-size: 1.25rem;
+    }
+
+    .article-credit .date-created {}
+    .article-credit .share-button {}
+    .share-button button {}
+    .share-button button img {}
+    footer {}
+}
+
