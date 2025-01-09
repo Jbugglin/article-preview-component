@@ -4,6 +4,8 @@
     --grayish-blue: hsl(212, 23%, 69%);
     --light-grayish-blue: hsl(210, 46%, 95%);
     --mcBoxShadow: hsla(210, 18%, 87%, 0.247);
+    --large-font-weight: 700; 
+    --normal-font-weight: 500;
     font-size: 13px;
 }
 
@@ -25,20 +27,39 @@ body {
     align-items: center;
     position: relative;
     background-color: var(--light-grayish-blue);
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 main {
     background-color: white;
     border-radius: 0.75rem;
-    box-shadow: 0.125rem 1rem 0.75rem var(--mcBoxShadow);
+    box-shadow: 0.125rem 1.25rem 0.75rem var(--mcBoxShadow);
 }
 
 main .hero-image {
     display: block;
 }
 
+.text-container h1 {
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+}
+
+.text-container p {
+    font-weight: 500;
+    color: var(--desaturated-dark-blue);
+}
+
+.article-credit h2 {
+    color: var(--very-dark-grayish-blue);
+    font-weight: 700;
+}
+
 .article-credit .date-created {
     color: var(--grayish-blue);
+    font-weight: 500;
 }
 
 .share-button button {
@@ -96,7 +117,6 @@ main .hero-image {
     width: 4rem;
 }
 
-
 .share-onclick {
     display: none;
 }
@@ -114,6 +134,10 @@ main .hero-image {
     main .hero-image {
         border-radius: 0.75rem 0rem 0rem 0.75rem;
         width: 40%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: 0px;
     }
 
     main .text-container {
@@ -121,16 +145,17 @@ main .hero-image {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 3rem 4rem;
+        padding: 3rem 3.25rem;
     }
 
     .text-container h1 {
         width: 100%;
-        font-size: 1.625rem;
+        font-size: 1.5rem;
     }
 
     .text-container p {
         width: 100%;
+        font-size: 1rem;
     }
 
     .text-container .article-credit {
@@ -138,20 +163,23 @@ main .hero-image {
         justify-content: flex-start;
     }
 
+    .article-credit #user-avatar {
+        width: 3.125rem;
+    }
+
     .article-credit .author-pubDate{
         margin: 0rem 0rem 0rem 2rem;
     }
 
-    .article-credit #user-avatar {}
-
     .article-credit h2 {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
-    .article-credit .date-created {}
-    .article-credit .share-button {}
-    .share-button button {}
-    .share-button button img {}
-    footer {}
+    .share-button-container {
+        width: 35%;
+        display: flex;
+        justify-content: flex-end;
+        transform: translateX(45px);
+    }
 }
 
