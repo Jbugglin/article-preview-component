@@ -69,6 +69,10 @@ main .hero-image {
     cursor: pointer;
 }
 
+ .article-credit .share-button-container {
+    display: none;
+}
+
 footer {
     display: none;
 }
@@ -134,8 +138,9 @@ main .hero-image {
     font-size: 1rem;
 }
 
-.share-onclick {
-    display: none;
+.share-button button {
+    position: fixed;
+    translate: 10px -10px;
 }
 
 /* || Desktop-viewport styling with media query */
@@ -192,11 +197,12 @@ main .hero-image {
         font-size: 1rem;
     }
 
-    .share-button-container {
+    .article-credit .share-button {
         width: 35%;
         display: flex;
-        justify-content: flex-end;
-        transform: translateX(45px);
+        justify-content: space-evenly;
+        position: fixed;
+        margin: 0rem 0rem 0rem 7rem;
     }
 }
 
