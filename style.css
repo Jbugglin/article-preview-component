@@ -66,6 +66,7 @@ main .hero-image {
     border: none;
     padding: 0.5rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 footer {
@@ -138,7 +139,7 @@ main .hero-image {
 }
 
 /* || Desktop-viewport styling with media query */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1440px) {
     main {
         display: flex;
         flex-direction: row;
